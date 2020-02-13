@@ -2,4 +2,4 @@
 
 composer install --prefer-dist
 
-composer run test
+composer run dep deploy production
