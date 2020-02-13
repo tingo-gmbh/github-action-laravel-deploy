@@ -3,7 +3,7 @@ FROM php:7.4-apache
 
 # Basic system software
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends git zip unzip libgmp-dev curl libzip-dev libonig-dev && \
+    apt-get install -y --no-install-recommends git zip unzip libgmp-dev curl libzip-dev libonig-dev openssh-client && \
     pecl channel-update pecl.php.net && \
     pecl install apcu igbinary && \
     pecl bundle redis && cd redis && phpize && ./configure --enable-redis-igbinary && make && make install && \
